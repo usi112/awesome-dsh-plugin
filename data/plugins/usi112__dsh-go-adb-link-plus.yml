@@ -1,0 +1,7 @@
+url: https://github.com/usi112/dsh-go-adb-link-plus
+name: usi112/dsh-go-adb-link-plus
+category: dev
+description:
+  en: 'Keeps an ADB over TCP link alive inside the phone for DSH Go: pins adbd to port 3455 with adb tcpip, pairs Android 11+ wireless debugging, and finds the listening port by reading the device socket table in about 180 ms.'
+  zh: '在手机内部维持 DSH Go 的 ADB TCP 通道：用 adb tcpip 把 adbd 固定到 3455 端口，支持 Android 11+ 无线调试配对，并通过读取设备套接字表在约 180 毫秒内找到监听端口。'
+tarball: https://github.com/usi112/dsh-go-adb-link-plus/releases/download/v0.2.0/dsh-go-adb-link-plus-0.2.0.tgz
