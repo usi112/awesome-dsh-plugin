@@ -1,0 +1,6 @@
+url: https://github.com/usi112/dsh-purge-fixed
+name: usi112/dsh-purge-fixed
+category: security
+description:
+  en: "A fixed fork of dsh-purge (upstream 1.1.71, MIT): prompt/sandbox/approval cleanup patches with per-patch reasons, an applied receipt, one-key regression, and a reanchor override layer so engine upgrades no longer mean editing the generated patch table. Current release targets DSH Go 1.0.16 (1.0.15 users should stay on 1.1.75)."
+  zh: "dsh-purge 的修复分支（上游 1.1.71，MIT）：提示词/沙箱/审批类清洗补丁，每条写明原因，有应用回执与一键回归；新增重锚覆盖层，引擎换版不必再改生成文件。当前版本针对 DSH Go 1.0.16，1.0.15 用户请留在 1.1.75。"

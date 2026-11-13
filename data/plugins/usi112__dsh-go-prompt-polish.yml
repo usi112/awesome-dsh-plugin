@@ -1,0 +1,7 @@
+url: https://github.com/usi112/dsh-go-prompt-polish
+name: usi112/dsh-go-prompt-polish
+category: ui
+description:
+  en: "Prompt-polish capsule above the composer in DSH Go (Android): tap it and the session's model rewrites your draft into a clearer prompt — goal, context, constraints and output form. A confirm page shows the full text first; you choose copy or append. Never sends a message, never touches history, never makes its own network calls. Tested on DSH Go 1.0.16."
+  zh: "DSH Go（Android）输入框上方的「✦ 优化提示词」胶囊：点一下，当前会话的模型把草稿重写成更清晰的提示词——目标、背景、约束、交付形式一次补齐；确认页先看全文，复制还是追加由你定。不发送消息、不改对话内容、不额外联网。已在 DSH Go 1.0.16 上验证。"
+icon: https://raw.githubusercontent.com/usi112/dsh-go-prompt-polish/main/docs/preview/capsule.jpg

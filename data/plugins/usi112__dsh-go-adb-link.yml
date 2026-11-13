@@ -1,0 +1,6 @@
+url: https://github.com/usi112/dsh-go-adb-link
+name: usi112/dsh-go-adb-link
+category: dev
+description:
+  en: "Keeps an ADB channel to the phone for DSH Go: finds the adbd TCP port (wireless debugging, Shizuku, adb tcpip), connects with the local adb client and reconnects on its own. Adds an adb tool the agent can call, plus a status strip above the composer. Tested on DSH Go 1.0.16."
+  zh: "给 DSH Go 保持一条手机 ADB 通道：自动找到 adbd 的 TCP 端口（无线调试 / Shizuku / adb tcpip），用本机 adb 连上并自动重连；提供 AI 可直接调用的 adb 工具，输入框上方有状态条。已在 DSH Go 1.0.16 上验证。"

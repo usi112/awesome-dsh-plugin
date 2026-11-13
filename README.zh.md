@@ -1870,6 +1870,7 @@ dsh plugin --profile web add dshmarket
 - [UnknowCao/dsh-dock](https://github.com/UnknowCao/dsh-dock) — DeepSeek Harness 的 Windows 桌面启动器：一键鲸鱼图标 + 侧栏「更多」菜单（设置 / 重启/刷新 / 优雅完全退出），冷启动卡片支持可滚动的多 DSH 候选选择。
 - [uoiszero/dsh-photo-picker#dsh-photo-picker](https://github.com/uoiszero/dsh-photo-picker/tree/main/plugin) — DSH 本机照片挑选工作台（macOS / Windows）：本地去重、过滤与分组，用你自备的图片输入模型做 AI 网格粗筛与评分（插件不内置模型、凭据或额度），并支持人工复核、校准与导出。
 - [user-Mrz/dsh-system-prompt-studio](https://github.com/user-Mrz/dsh-system-prompt-studio) — 按对话管理 DeepSeek Harness 的系统提示词：追加文本、按名替换某一第一方段落，或整段替换，保存后下一次模型请求即生效，无需重启。覆盖按会话持久化，fork 出的对话会沿父链继承上游规则，并可用「在此固定」把继承结果固化成本地规则。面板会列出真实的装配段清单，并对未保存的修改做保护。
+- [usi112/dsh-go-prompt-polish](https://github.com/usi112/dsh-go-prompt-polish) — DSH Go（Android）输入框上方的「✦ 优化提示词」胶囊：点一下，当前会话的模型把草稿重写成更清晰的提示词——目标、背景、约束、交付形式一次补齐；确认页先看全文，复制还是追加由你定。不发送消息、不改对话内容、不额外联网。已在 DSH Go 1.0.16 上验证。
 - [Utmotc/dsh-balance-card](https://github.com/Utmotc/dsh-balance-card) — 在当前会话所用模型的厂商 API 余额，以 dsh Web 侧边栏卡片常驻展示，含每套餐进度条、货币/积分单位区分、设置页，以及订阅与积分额度监测。
 - [vaisramana/dsh-bookmark](https://github.com/vaisramana/dsh-bookmark) — 在对话中选中文本或表格右键收藏并高亮，在右侧边栏内联添加注释，并提供按会话分组折叠的全局书签页。
 - [vamyane/dsh-brain-viewer](https://github.com/vamyane/dsh-brain-viewer) — 把 Markdown 笔记编译成脑形关系图谱的 DSH 侧栏查看器，附带文档导入与图谱构建管线。查看器自带演示数据、无需 Python；用自己的笔记重建图谱需要 Node.js 20+ 与 Python 3.8+，在命令行里运行。
@@ -9714,6 +9715,8 @@ dsh plugin --profile web add dshmarket
 - [TwinsEarth/DSH-2Xray](https://github.com/TwinsEarth/DSH-2Xray) — 为 DSH 提供 Xray 受管内核与分流：VLESS 导入、全局/国内直连/白名单路由、三卡片实时面板与自更新。
 - [TwinsEarth/dsh-fang](https://github.com/TwinsEarth/dsh-fang) — 为 DeepSeek Harness 插件开发与测试提供母体、元主、分身隔离工作区，支持插件热更新与跨分身共享的决策收件箱。
 - [tyouter/dsh-recorder](https://github.com/tyouter/dsh-recorder) — 按脚本操作另一个 DSH 插件的真实界面，并把真实窗口录成 GIF。仅限 Windows。它的 /recorder 路由没有 DSH 的访问检查，而 run 路由可以让已打开的 DSH 页面点击和输入，所以你打开的任何网页都可能驱动它；录制会用 Pillow 截取屏幕的一块区域。
+- [usi112/dsh-go-adb-link](https://github.com/usi112/dsh-go-adb-link) — 给 DSH Go 保持一条手机 ADB 通道：自动找到 adbd 的 TCP 端口（无线调试 / Shizuku / adb tcpip），用本机 adb 连上并自动重连；提供 AI 可直接调用的 adb 工具，输入框上方有状态条。已在 DSH Go 1.0.16 上验证。
+- [usi112/dsh-go-adb-link-plus](https://github.com/usi112/dsh-go-adb-link-plus) — dsh-go-adb-link 的加固二改：端口扫描、无线配对兜底，面板里能看状态/端口/客户端并执行连接、扫描、断开、复制命令；运行时被重置、adb 缺失时会自己把它装回来。已在 DSH Go 1.0.16 上验证。
 - [vamyane/dsh-skill-audit](https://github.com/vamyane/dsh-skill-audit) — 给 DeepSeek Harness 的技能与插件做体检的审核台：扫描本地技能目录和已安装插件，检查容易导致安装失败的打包规则，逐项打分并导出 Markdown 修复报告。
 - [ven314/dsh-conflict-doctor](https://github.com/ven314/dsh-conflict-doctor) — DSH 插件冲突诊断与修复建议。把运行期能力图谱与磁盘上的 cordis.patch.yml 层对齐，并与真正在运行的宿主（而不是 profile 里可能过期的副本）比对导入、peer 范围与配置，检出那些不会自己报错的静默故障：卡在 PENDING 等待无人提供的服务、浏览器半区注入了无人提供的客户端模块、两个插件注册同一个 tool id、Loader entry id 重复、某层停用又被后一层重新插入的行、导入了运行宿主未通过 exports 暴露的子路径、以及 inject 声明之间成环。每条结论都带证据、归属置信度与带风险分级的修复：用 --dry-run 在内存里试修并看修改前后差异，或用 --fix-out 拿到独立的 .patch.yml 文件自己挑（这些文件不会被 DSH 加载，挑错也不影响运行）。
 - [Verchiel666/dsh-aosp](https://github.com/Verchiel666/dsh-aosp) — 从 codeload 拉 AOSP 源码快照，在本机用 ripgrep 检索，九个工具覆盖镜像列表、预设包、拉取、增量更新、跨模块正则搜索、启发式调用链追踪与按行读取，不需要 git、root 或编译。
@@ -10047,6 +10050,7 @@ dsh plugin --profile web add dshmarket
 - [toby-bridges/api-relay-audit](https://github.com/toby-bridges/api-relay-audit) — 从 DeepSeek Harness 对 AI API 中转站和 LLM 代理运行本地安全审计，生成 Markdown 报告，覆盖提示词注入、模型替换信号、工具调用改写、错误泄漏、流完整性和按 profile 启用的 Web3 风险。
 - [Top-Celestial-Company-Ltd/dsh-dros-vajraclaw](https://github.com/Top-Celestial-Company-Ltd/dsh-dros-vajraclaw) — DSH 本機工具調用防護外掛：攔截高風險 Shell 指令模式與敏感憑證讀取，具備持久化哈希鏈 JSONL 審計記錄，可選配外部 Gateway 集中治理。
 - [truelove-dreamer/dsh-plugin-vetting](https://github.com/truelove-dreamer/dsh-plugin-vetting) — 为了您的电脑安全，装插件前先体检：静态扫描恶意模式（外传/凭据/混淆/持久化）与高权限误用，覆盖传递依赖与官方包哈希基线（防供应链篡改），可选插件工具调用闸。
+- [usi112/dsh-purge-fixed](https://github.com/usi112/dsh-purge-fixed) — dsh-purge 的修复分支（上游 1.1.71，MIT）：提示词/沙箱/审批类清洗补丁，每条写明原因，有应用回执与一键回归；新增重锚覆盖层，引擎换版不必再改生成文件。当前版本针对 DSH Go 1.0.16，1.0.15 用户请留在 1.1.75。
 - [uwu9039/dsh-airbag](https://github.com/uwu9039/dsh-airbag) — 拦截粘贴进输入框或被工具写入的 API 密钥，记录泄露事件，并扫描工作区中暴露的密钥。
 - [Veagau/dsh-account-vault](https://github.com/Veagau/dsh-account-vault) — 在浏览器本地加密保存账号凭据。
 - [Vladimir-Kryshchenko/dsh-route-fence-linter](https://github.com/Vladimir-Kryshchenko/dsh-route-fence-linter) — 审计 profile 内所有插件 HTTP 路由的浏览器信任围栏：插件路由在 Web 服务器的最长前缀匹配中优先，因此缺少围栏的路由会被静默暴露；逐条给出文件与行号级别的证据。
